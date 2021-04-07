@@ -1,0 +1,4 @@
+
+
+render partial: "position.json.jb", locals: { position: @position }
+

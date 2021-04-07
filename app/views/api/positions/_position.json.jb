@@ -1,0 +1,8 @@
+{
+  id: position.id,
+  user_id: position.user_id,
+  symbol: position.symbol,
+  purchase_price: position.purchase_price,
+  purchase_qty: position.purchase_qty,
+  status_open: position.status_open,
+}
