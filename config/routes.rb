@@ -14,5 +14,12 @@ Rails.application.routes.draw do
     get "/positions/:id" => "positions#show"
     patch "/positions/:id" => "positions#update"
     delete "/positions/:id" => "positions#destroy"
+
+    ###TRANSACTION ROUTES
+    get "/transactions" => "transactions#index"
+    post "/transactions" => "transactions#create"
+    get "/transactions/:id" => "transactions#show"
+    patch "/transactions/:id" => "transactions#update"
+    delete "/transactions/:id" => "transactions#destroy"
   end
 end

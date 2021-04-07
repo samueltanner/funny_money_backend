@@ -1,0 +1,3 @@
+@transactions.map do |transaction|
+  render partial: "transaction.json.jb", locals: { transaction: transaction }
+end

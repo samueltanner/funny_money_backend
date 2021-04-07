@@ -1,0 +1,9 @@
+{
+  id: transaction.id,
+  position_id: transaction.position_id,
+  user_id: transaction.user_id,
+  # symbol: transaction.symbol, ### THIS WILL NEED TO BE CALLED THROUGH POSITIONS
+  purchase_price: transaction.purchase_price,
+  purchase_qty: transaction.purchase_qty,
+  status_open: transaction.status_open,
+}

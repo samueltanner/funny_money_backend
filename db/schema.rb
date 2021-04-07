@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_164512) do
+ActiveRecord::Schema.define(version: 2021_04_07_171611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,6 @@ ActiveRecord::Schema.define(version: 2021_04_07_164512) do
   create_table "positions", force: :cascade do |t|
     t.integer "user_id"
     t.string "symbol"
-    t.decimal "purchase_price", precision: 10, scale: 4
-    t.decimal "purchase_qty", precision: 10, scale: 4
-    t.boolean "status_open", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
