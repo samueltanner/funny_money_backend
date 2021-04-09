@@ -2,17 +2,18 @@ class Api::TransactionsController < ApplicationController
   before_action :authenticate_user, except: [:index] #this keeps index and show from just blatantly being blocked without a jwt
 
   def index
-    @transactions = Transaction.where(user_id: current_user.id) #current_user.
+    @transactions = Transaction.where(user_id: current_user.id)
     render "index.json.jb"
   end
 
   def create
     @transaction = Transaction.new(
       user_id: current_user.id,
-      position_id: params[:position_id],
+      # position_id: params[:position_id],
       purchase_price: params[:purchase_price],
       purchase_qty: params[:purchase_qty],
       status_open: params[:status_open],
+      symbol: params[:symbol],
     )
 
     if @transaction.save
@@ -38,11 +39,10 @@ class Api::TransactionsController < ApplicationController
     @transaction = Transaction.find(params[:id])
 
     if current_user.id == @transaction.user_id
-      # transaction_id = params[:id]
-      # @transaction = Transaction.where(user_id: current_user.id).find(transaction_id)
       @transaction.purchase_price = params[:purchase_price] || @transaction.purchase_price
       @transaction.purchase_qty = params[:purchase_qty] || @transaction.purchase_qty
       @transaction.status_open = params[:status_open] || @transaction.status_open
+      @transaction.symbol = params[:symbol] || @transaction.symbol
 
       if @transaction.save
         render "show.json.jb"
@@ -52,12 +52,6 @@ class Api::TransactionsController < ApplicationController
     else
       render json: { message: "Unauthorized" }, status: 406
     end
-
-    # if @transaction.save
-    #   render "show.json.jb"
-    # else
-    #   render json: { errors: @transaction.errors.full_messages }, status: 406
-    # end
   end
 
   def destroy

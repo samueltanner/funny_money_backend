@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_171611) do
+ActiveRecord::Schema.define(version: 2021_04_09_062856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "positions", force: :cascade do |t|
-    t.integer "user_id"
     t.string "symbol"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -30,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_171611) do
     t.boolean "status_open"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "symbol"
   end
 
   create_table "users", force: :cascade do |t|
