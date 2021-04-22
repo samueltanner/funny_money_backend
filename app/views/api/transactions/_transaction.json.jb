@@ -1,11 +1,21 @@
 {
-  # positions: transaction.position,
+
   id: transaction.id,
   symbol: transaction.symbol,
   position_id: transaction.position_id,
   user_id: transaction.user_id,
   purchase_price: transaction.purchase_price,
   purchase_qty: transaction.purchase_qty,
+  cost_basis: transaction.cost_basis,
   status_open: transaction.status_open,
+  current_info: transaction.current_market_info,
+
+# current_price: transaction.current_market_info["latestPrice"],
+
+# day_price_change: transaction.current_market_info["change"],
+# market_value: transaction.market_value,
+# day_percent_change: transaction.current_market_info["changePercent"],
+# gain_loss_percentage: transaction.gain_loss_percentage,
+# gain_loss: transaction.gain_loss,
 
 }
