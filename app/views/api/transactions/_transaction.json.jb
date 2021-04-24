@@ -1,5 +1,5 @@
 {
-
+  username: transaction.user.name,
   id: transaction.id,
   symbol: transaction.symbol,
   position_id: transaction.position_id,

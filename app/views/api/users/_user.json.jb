@@ -1,0 +1,8 @@
+{
+  username: user.name,
+  email: user.email,
+  groups: user.groups,
+  transactions: {
+    transactions: user.transactions_list,
+  },
+}

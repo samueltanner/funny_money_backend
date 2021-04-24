@@ -1,0 +1,1 @@
+render partial: "group.json.jb", locals: { group: @group }

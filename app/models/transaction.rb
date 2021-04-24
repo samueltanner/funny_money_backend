@@ -30,4 +30,6 @@ class Transaction < ApplicationRecord
     #(new - old)/old
     market_value - cost_basis
   end
+
+
 end

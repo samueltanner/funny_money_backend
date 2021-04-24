@@ -1,0 +1,3 @@
+@groups.map do |group|
+  render partial: "group.json.jb", locals: { group: group }
+end

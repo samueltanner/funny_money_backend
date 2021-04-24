@@ -1,0 +1,13 @@
+{
+  group_name: group.name,
+  group_description: group.description,
+  private: group.private,
+  members: group.users.map do |user|
+    {
+      id: user.id,
+      username: user.name,
+      transactions: user.transactions,
+    }
+  end,
+
+}
