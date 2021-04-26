@@ -7,6 +7,7 @@
       id: user.id,
       username: user.name,
       transactions: user.transactions,
+    # WHY CAN I NOT MAP TRANSACTIONS?
     }
   end,
 

@@ -2,7 +2,10 @@
   username: user.name,
   email: user.email,
   groups: user.groups,
-  transactions: {
-    transactions: user.transactions_list,
-  },
+  transactions: user.transactions.map do |transaction|
+    {
+      symbol: transaction.symbol,
+      purchase_price: transaction.purchase_price,
+    }
+  end,
 }

@@ -11,11 +11,11 @@ class User < ApplicationRecord
   #     transaction
   #   end
   # end
-  def transactions_list
-    transactions_array = []
-    transactions.map do |transaction|
-      transactions_array << transaction.symbol
-      transactions_array << transaction.purchase_price
-    end
-  end
+  # def transactions_list
+  #   transactions_array = []
+  #   transactions.map do |transaction|
+  #     transactions_array << transaction.symbol
+  #     transactions_array << transaction.purchase_price
+  #   end
+  # end
 end
