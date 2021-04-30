@@ -1,11 +1,15 @@
 {
+  id: user.id,
   username: user.name,
   email: user.email,
   groups: user.groups,
   transactions: user.transactions.map do |transaction|
     {
+      id: transaction.id,
       symbol: transaction.symbol,
       purchase_price: transaction.purchase_price,
+      purchase_qty: transaction.purchase_qty,
+      current_info: transaction.current_market_info,
     }
   end,
 }

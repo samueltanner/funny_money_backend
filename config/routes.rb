@@ -29,5 +29,6 @@ Rails.application.routes.draw do
     get "/groups" => "groups#index"
     post "/groups" => "groups#create"
     get "/groups/:id" => "groups#show"
+    post "/groups/:id/join" => "groups#join"
   end
 end
