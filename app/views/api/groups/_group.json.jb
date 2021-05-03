@@ -1,4 +1,5 @@
 {
+  # admin: group.
   id: group.id,
   group_name: group.name,
   group_description: group.description,
