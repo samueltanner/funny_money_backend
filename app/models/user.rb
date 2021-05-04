@@ -6,7 +6,6 @@ class User < ApplicationRecord
   has_many :positions, through: :transactions
   has_many :user_groups
   has_many :groups, through: :user_groups
-  has_many :group_admins
 
   # def transaction_symbol
   #   transactions.map do |transaction|
