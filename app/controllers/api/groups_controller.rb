@@ -29,13 +29,13 @@ class Api::GroupsController < ApplicationController
   def join
     @group = Group.find(params[:id])
 
-    if UserGroup.where(user_id: current_user.id, group_id: @group.id)
-      render json: { message: "You are already in this group" }
-    else
-      user_id = current_user.id
-      group_id = @group.id
-      @user_group = UserGroup.create(user_id: user_id, group_id: group_id)
-      render "show.json.jb"
-    end
+    # if UserGroup.where(user_id: current_user.id, group_id: @group.id)
+    #   render json: { message: "You are already in this group" }
+    # else
+    user_id = current_user.id
+    group_id = @group.id
+    @user_group = UserGroup.create(user_id: user_id, group_id: group_id)
+    render "show.json.jb"
+    # end
   end
 end
